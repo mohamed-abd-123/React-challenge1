@@ -1,0 +1,24 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.body {
+  margin: 5px;
+  border-style: solid;
+}
+.image {
+  height: 200px;
+  width: 20%;
+  display: block;
+  margin: 1px auto;
+}
+.para {
+  text-align: center;
+}
+.web {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
