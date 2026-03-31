@@ -1,6 +1,30 @@
 import logo from "./logo.svg";
 import "./App.css";
+const skillsInfo = [
+  {
+    skillName: "html",
+    emoji: "💪 ",
+    bgColor: "red",
+  },
 
+  {
+    skillName: "css",
+    emoji: "👶",
+    bgColor: "green",
+  },
+
+  {
+    skillName: "javascript",
+    emoji: "🤙",
+    bgColor: "blue",
+  },
+
+  {
+    skillName: "github",
+    emoji: "👶",
+    bgColor: "purple",
+  },
+];
 function App() {
   return (
     <div className="body">
@@ -30,29 +54,19 @@ function Intro() {
 }
 function Skilllist() {
   return (
-    <Skill
-      name1="Html+Css 🔥"
-      name2="Javascript 🔥"
-      name3=" Git Github 🔥"
-      name4="web design 🔥"
-      name5="React 🔥"
-    />
+    <div className="web">
+      {skillsInfo.map((ele) => {
+        return <Skill skillObj={ele} />;
+      })}
+    </div>
   );
 }
 function Skill(props) {
-  const style1 = { backgroundColor: "blue" };
-  const style2 = { backgroundColor: "yellow" };
-  const style3 = { backgroundColor: "green" };
-  const style4 = { backgroundColor: "red" };
-  const style5 = { backgroundColor: "pink" };
   return (
-    <div className="web">
-      <span style={style1}>{props.name1} </span>
-      <span style={style2}>{props.name2} </span>
-      <span style={style3}> {props.name3}</span>
-      <span style={style4}> {props.name4}</span>
-      <span style={style5}> {props.name5}</span>
-    </div>
+    <span  style={{ backgroundColor: props.skillObj.bgColor }}>
+      <span>{props.skillObj.skillName} </span>
+      <span>{props.skillObj.emoji} </span>
+    </span>
   );
 }
 
