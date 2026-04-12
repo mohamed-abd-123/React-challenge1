@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 const skillsInfo = [
   {
@@ -71,3 +71,10 @@ function Skill(props) {
 }
 
 export default App;
+
+
+
+
+
+
+
